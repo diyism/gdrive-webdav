@@ -6,7 +6,7 @@ Simple Google Drive => WebDAV bridge.
 
 ## Usage
 
-* Obtain OAuth keys and enable GDrive API (https://developers.google.com/drive/v3/web/quickstart/go)
+* Enable GDrive API and create OAuth keys(https://console.cloud.google.com/apis/library/drive.googleapis.com)
 * Run using docker:
 ```
 docker run -ti --rm -p 8765:8765 skippa/gdrive-webdav --client-id=<client_id> --client-secret=<client_secret>
@@ -16,7 +16,8 @@ docker run -ti --rm -p 8765:8765 skippa/gdrive-webdav --client-id=<client_id> --
 ## Building From Source
 
 ```
-go build -i ./...
+go build
+./gdrive-webdav --client-id=<client_id> --client-secret=<client_secret>
 ```
 
 ## Status
